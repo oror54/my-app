@@ -1,0 +1,46 @@
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .main_content {
+            width: 50%;
+
+            .main_tit {
+                font-family: 'Pretendard';
+                font-weight: 900;
+                font-size: 50px;
+                line-height: 1.4;
+            }
+
+            .main_txt {
+                font-family: 'Pretendard';
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 1.4;
+                letter-spacing: -.75px;
+                width: 320px;
+                white-space: pre-line;
+                word-break: keep-all;
+            }
+
+            .contact {
+                text-decoration: none;
+            }
+        }
+
+        .main_img {
+            .img {
+                width: 500px;
+                height: 500px;
+                object-fit: cover;
+            }
+        }
+    }
+}

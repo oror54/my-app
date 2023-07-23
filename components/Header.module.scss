@@ -106,23 +106,50 @@
     font-display: swap;
 }
 
-.navibar {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
+.header {
+    width: 100%;
 
-    .navi_item {
-        list-style: none;
-        font-family: 'Pretendard';
-        font-size: 18px;
-        letter-spacing: -.5px;
+    .navi_wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
 
-        a {
-            text-decoration: none;
-            text-transform: uppercase;
-            color: #555;
-            font-weight: 500;
-            cursor: pointer;
+        h1 {
+            .logo {
+                width: 80px;
+            }
+        }
+
+        .navibar {
+            display: flex;
+            flex-direction: row;
+
+            .navi_item {
+                list-style: none;
+                font-family: 'Pretendard';
+                font-size: 18px;
+                letter-spacing: -.5px;
+                width: 100px;
+                text-align: center;
+
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: #555;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: all .3s;
+                }
+
+                a.active {
+                    color: #FF6B00;
+                    font-weight: 700;
+                }
+            }
         }
     }
 }
