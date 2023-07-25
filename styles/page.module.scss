@@ -47,6 +47,18 @@
 
         }
 
+        .main_wrap {
+            .mainImage {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                width: 100%;
+                height: 800px;
+                object-fit: cover;
+                filter: opacity(0.3) brightness(0.9);
+            }
+        }
+
         .content {
             width: 100%;
             height: 100%;

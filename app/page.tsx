@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "@/styles/page.module.scss";
 import About from "./about";
 import Skill from "./skill";
+import mainImage from "@/public/main.jpeg";
 /* Prop =========================================================== */
 type Prop = {};
 
@@ -9,10 +10,17 @@ export default function Home() {
   return (
     <div className={styles.wrap}>
       <div className={styles.main}>
-        <div className={styles.video}>
+        {/* <div className={styles.video}>
           <video muted autoPlay loop playsInline>
             <source src={require("@/public/mainvideo.mp4")} type="video/mp4" />
           </video>
+        </div> */}
+        <div className={styles.main_wrap}>
+          <Image
+            src={mainImage}
+            alt="메인이미지"
+            className={styles.mainImage}
+          />
         </div>
         <div className={styles.content}>
           <div className={styles.title}>
