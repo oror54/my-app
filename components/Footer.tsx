@@ -1,32 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import styles from "@/components/Header.module.scss";
+import styles from "@/components/Footer.module.scss";
 import Image from "next/image";
 import Logo from "@/public/logo.svg";
 import React from "react";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-export default function Header() {
+export default function Footer() {
   const pathname = usePathname();
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const updateScroll = () => {
-    setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", updateScroll);
-  });
   return (
-    <>
-      <div className={scrollPosition < 50 ? styles.header : styles.header_act}>
-        <div className={styles.navi_wrap}>
-          <h1>
+    <div className={styles.footer}>
+      <div className={styles.wrap}>
+        <div className={styles.foot_gnb}>
+          <div className={styles.foot_logo}>
             <Link href={"/"}>
               <Image src={Logo} alt="지현포트폴리오" className={styles.logo} />
             </Link>
-          </h1>
-          <ul className={styles.navibar}>
-            <li className={styles.navi_item}>
+          </div>
+          <ul className={styles.gnb}>
+            <li className={styles.item}>
               <Link
                 href={"/"}
                 className={pathname === "/" ? styles.active : ""}
@@ -34,7 +26,7 @@ export default function Header() {
                 home
               </Link>
             </li>
-            <li className={styles.navi_item}>
+            <li className={styles.item}>
               <Link
                 href={"/projects"}
                 className={pathname === "/projects" ? styles.active : ""}
@@ -42,7 +34,7 @@ export default function Header() {
                 project
               </Link>
             </li>
-            <li className={styles.navi_item}>
+            <li className={styles.item}>
               <Link
                 href={"/study"}
                 className={pathname === "/study" ? styles.active : ""}
@@ -52,7 +44,10 @@ export default function Header() {
             </li>
           </ul>
         </div>
+        <div className={styles.txt}>
+          © 2023 Hong jihyeon. All Rights Reserved.
+        </div>
       </div>
-    </>
+    </div>
   );
 }

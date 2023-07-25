@@ -9,10 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/aos": "^3.0.4",
+    "aos": "^2.3.4",
     "eslint-config-next": "13.4.11",
+    "lottie-react": "^2.4.0",
     "next": "13.4.11",
+    "next-videos": "^1.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-lottie-player": "^1.5.4",
     "react-router": "^6.14.2",
     "react-router-dom": "^6.14.2",
     "sass": "^1.64.0"
