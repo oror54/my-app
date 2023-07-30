@@ -22,7 +22,7 @@ export default function Home() {
             className={styles.mainImage}
           />
         </div>
-        <div className={styles.content}>
+        <div className={styles.content} data-aos="fade-up">
           <div className={styles.title}>
             <p>
               <b> “ 디자인</b>과 <b>개발</b>에 대한 열정이 가득한
